@@ -1,0 +1,6 @@
+[template]
+src = "nginx.tmpl"
+dest = "nginx.cfg"
+keys = [
+  "/nginx/hosts/"
+]
