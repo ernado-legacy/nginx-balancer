@@ -27,6 +27,6 @@ RUN go get -v github.com/coreos/etcdctl
 # copying config files and templates
 ADD nginx.toml /etc/confd/conf.d/
 ADD nginx.tmpl /etc/confd/templates/
-ADD run.sh /usr/bin/run.sh
+ADD run.sh     /usr/bin/run.sh
 
 ENTRYPOINT ["run.sh"]
