@@ -1,6 +1,8 @@
 [template]
 src = "nginx.tmpl"
-dest = "nginx.cfg"
+dest = "/sites-enabled/nginx.cfg"
 keys = [
   "/nginx/hosts/"
 ]
+check_cmd  = "nginx -t"
+reload_cmd = "nginx -s reload"
