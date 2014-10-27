@@ -9,8 +9,8 @@ upstream {{ $dir }} {
 server {
     server_name  {{$hostname := printf "/nginx/hosts/%s/hostname" $dir}}{{ getv $hostname }};
     location / {
-        proxy_pass         http://{{ $dir }};
-        include /etc/nginx/includes/proxy.cfg;
+        proxy_pass http://{{ $dir }};
+        include    /etc/nginx/includes/proxy.cfg;
    }
 }
 {{end}}

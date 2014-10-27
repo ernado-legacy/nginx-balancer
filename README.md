@@ -35,8 +35,8 @@ upstream cydev {
 server {
     server_name cydev.ru
     location / {
-        proxy_pass         http://cydev;
-        include includes/proxy.cfg;
+        proxy_pass http://cydev;
+        include    includes/proxy.cfg;
    }
 }
 ```
