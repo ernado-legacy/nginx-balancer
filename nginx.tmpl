@@ -1,7 +1,7 @@
 {{range $dir := ls "/nginx/hosts"}}
-{{$custdir := printf "/nginx/hosts/%s/web/" $dir}}
-upstream {{ $dir }} {
-{{ range ls $custdir }}    server {{.}};{{ end }}
+{{$custdir := printf "/nginx/hosts/%s/web/*" $dir}}
+upstream {{ $dir }} { {{ range getvs $custdir }}    
+    server {{ . }};{{ end }}
 }
 {{end}}
 
